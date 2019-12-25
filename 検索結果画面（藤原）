@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <title>Categolearning</title>
+  <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<body>
+<div class="header">
+  <div class="header-logo">Categolearnig&#x270f;</div>
+  <div class="header-list">
+    <ul>
+      <li><a href="https://mdle.tufs.ac.jp/moodle/login/index.php">検索</li></a>
+      <li><a href="https://ja.bab.la/活用/ポーランド語/">ログイン</li></a>
+      <li><a href="https://nacademy.tufs.ac.jp/anet2/">投稿</li></a>
+    </ul>
+  </div>
+</div>
+<div class="main">
+  <div class="box1">
+  <form action= method="post">
+  <p> 検索したいキーワードを入力してください。</p>
+  <input type="search" name="search" placeholder="キーワードを入力">
+  <input type="submit" name="submit" value="検索">
+  <input type="hidden" id="select" name="limit" value="<$mt:SearchMaxResults$>" />
+  </form>
+<select name="category">
+<option value="0">全学年</option>
+<MTTopLevelCategories>
+<MTSubCatIsFirst></MTSubCatIsFirst><MTIfNonZero tag="MTCategoryCount">
+<option value="<mt:categorylabel>">中1</option>
+<option value="<mt:categorylabel>">中2</option>
+<option value="<mt:categorylabel>">中3</option>
+<option value="<mt:categorylabel>">高1</option>
+<option value="<mt:categorylabel>">高2</option>
+<option value="<mt:categorylabel>">高3</option>
+</MTIfNonZero><MTSubCatsRecurse><MTSubCatIsLast></MTSubCatIsLast>
+</MTTopLevelCategories>
+</select>
+  </div>
+</div>
